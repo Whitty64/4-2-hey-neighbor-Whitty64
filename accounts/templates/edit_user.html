@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="squareeditflavor">
+    <h1 class="textcenter">Edit Profile</h1>
+        <form class="newform" action ='' method ='post'>{%csrf_token%}
+            {{form.as_p}}
+            <input class="" type="submit" value="Edit Profile Dude"/>
+        </form>
+</div>
+{%endblock content%}
+

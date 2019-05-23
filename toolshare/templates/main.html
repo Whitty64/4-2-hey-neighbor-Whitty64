@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <span>Hi <a href="{% url 'edituser' user.pk %}">{{user.username}}</a></span>
+    <span><a class="toplink" href="{% url 'tool_new' %}">Add New Tool</a></span>
+    <span><a class="toplink" href="{% url 'my_tool' user.pk %}">My Tools</a></span>
+    <span><a class="toplink" href="{% url 'userlist' %}">Users</a></span>
+
+
+{% for tool in object_list %}
+
+    <h4 class=""><a class="" href="{% url 'tools_detail' tool.pk %}">{{tool.toolname}}</a></h4>
+    <img class = "imgposit"src="{{tool.model_pic}}">
+
+{%endfor%}
+{%endblock%}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+        <div class="squaredetail">
+            <h1 class="">{{tool.toolname}}</h1>
+            <div class="avail">
+                <div class="detailinfo">
+                <span>{{tool.type_of_tool}}/</span>
+                <span>{{tool.owner}}</span>
+                <span>({{tool.location}})</span>
+                </div>
+                <img src="{{tool.model_pic}}">
+                <p class="description">{{tool.description}}</p>
+            </div>
+        </div>
+
+
+{%endblock content%}

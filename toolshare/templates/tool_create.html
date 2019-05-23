@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="">
+    <h1 class="textcenter">Add New Tool</h1>
+        <form class="newform" action ='' method ='post'>{%csrf_token%}
+            {{form.as_p}}
+            <input class="" type="submit" value="Add new Tool Dude"/>
+        </form>
+</div>
+{%endblock content%}
