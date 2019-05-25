@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="">
+    <h1 class="textcenter">Edit Tool</h1>
+        <form class="newform" action ='' method ='post'>{%csrf_token%}
+            {{form.as_p}}
+            <input class="" type="submit" value="Edit Tool Dude"/>
+        </form>
+    <div class="textcenter"><a class="toplink"href="{% url 'delete_tool' tool.pk %}">Delete Tool</a></div>
+
+</div>
+{%endblock content%}

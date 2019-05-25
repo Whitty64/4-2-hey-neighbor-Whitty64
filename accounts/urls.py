@@ -1,10 +1,12 @@
 from django.urls import path
-from .views import SignUpView, UserListView, LoginView, UserUpdateView
+from .views import SignUpView, UserListView, UserUpdateView
+from django.contrib.auth.views import LogoutView
+
 
 urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
-    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
     path('users/', UserListView.as_view(), name='userlist'),
-    path('edituser/<int:pk>/', UserUpdateView.as_view(), name='edituser')
+    path('edituser/<int:pk>/', UserUpdateView.as_view(), name='edituser'),
 
 ]

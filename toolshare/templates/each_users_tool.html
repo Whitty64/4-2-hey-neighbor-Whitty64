@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+<html>
+
+<head>
+    <title>Tool Share App</title>
+</head>
+
+<div>
+    {%block content%}
+        <div>
+            {%for tool in object_list%}
+                <h4 class=""><a class="{% url 'tool_detail' " href="">{{tool.toolname}}</a></h4>
+                <img class = "imgposit"src="{{tool.model_pic}}">
+            {%endfor%}
+        </div>
+    {%endblock content%}
+</div>
+</html>
+<!--*****can't add pk to this tool_detail, reverse not found-->

@@ -1,16 +1,25 @@
 {%extends 'base.html'%}
 
 {%block content%}
-    <span>Hi <a href="{% url 'edituser' user.pk %}">{{user.username}}</a></span>
-    <span><a class="toplink" href="{% url 'tool_new' %}">Add New Tool</a></span>
-    <span><a class="toplink" href="{% url 'my_tool' user.pk %}">My Tools</a></span>
-    <span><a class="toplink" href="{% url 'userlist' %}">Users</a></span>
-
-
+<h1 class="companyname">Error 404<br>Fish Not Found</h1>
 {% for tool in object_list %}
-
-    <h4 class=""><a class="" href="{% url 'tools_detail' tool.pk %}">{{tool.toolname}}</a></h4>
-    <img class = "imgposit"src="{{tool.model_pic}}">
+    <div class="col-3 itemcard">
+    <div class="card-deck">
+      <div class="card">
+          <img class="card-img-top maintileimg" src="{{tool.model_pic}}">
+        <div class="card-body">
+            <h5 class="card-title"><a class="" href="{% url 'tools_detail' tool.pk %}">{{tool.toolname}}</a></h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <button>Rent</button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    </div>
 
 {%endfor%}
-{%endblock%}
+{%endblock content%}
+
+

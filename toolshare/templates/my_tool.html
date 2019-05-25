@@ -1,9 +1,8 @@
 {%extends 'base.html'%}
 
 {%block content%}
-{%for tool in object_list%}
-<!--*****can't add pk to this tool_detail, reverse not found-->
-    <h4 class=""><a class="{% url 'tool_detail' " href="">{{tool.toolname}}</a></h4>
+{% for tool in object_list %}
+    <h4 class=""><a class="" href="{% url 'edit_tool' tool.pk %}">{{tool.toolname}}</a></h4>
     <img class = "imgposit"src="{{tool.model_pic}}">
 {%endfor%}
 {%endblock%}

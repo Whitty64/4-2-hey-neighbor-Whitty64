@@ -1,26 +1,77 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html>
 <head>
     <title>Tool Share App</title>
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barrio|East+Sea+Dokdo|Exo+2|Raleway|Roboto|Zilla+Slab+Highlight:400,700&display=swap"
+          rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
+<body>
+<nav class="navbar navbg">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand homelink" href="{% url 'main' %}">HOME</a>
+            <span><a class="toplink" href="{% url 'signup' %}">Sign-Up <i class="fas fa-user-plus"></i></a></span>
 
-<div class="container">
-    <span><a class="toplink" href="{% url 'main' %}">Home</a></span>
-    <span><a class="toplink" href="{% url 'login' %}">Log In</a></span>
-    <span><a class="toplink" href="{% url 'signup' %}">Sign Up</a></span>
+            {% if request.user.is_authenticated %}
+            <span><a class="toplink" href="{% url 'logout' %}">Log Out <i class="fas fa-user-times"></i></a></span>
+            <span><a class="toplink" href="{% url 'tool_new' %}">Add Boat <i class="fas fa-plus"></i></a></span>
+            <span><a class="toplink" href="{% url 'my_tools' user.pk %}">My Boats <i class="far fa-clipboard"></i></a></span>
+            <span><a class="toplink" href="{% url 'userlist' %}">User List <i class="far fa-address-book"></i></a></span>
+            {% endif %}
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <span class="toplink">Hi,<a class="toplink" href="{% url 'edituser' user.pk %}">{{user.username}} <i class="fas fa-user-edit"></i></a></span>
+
+        {% else %}
+        <form action="" class="form-inline userpass" method="post" role="form">{% csrf_token %}
+            <div class="form-group">
+                {% for field in form %}
+                <div class="input-group">
+
+                    {% if field.html_name == 'username'%}
+                    <input class="form-control" id="{{ field.id_for_label }}" maxlength="30"
+                           name="{{ field.html_name }}" placeholder="{{ field.html_name }}" type="text"/>
+
+                    {% else %}
+                    <input class="form-control" id="{{ field.id_for_label }}" maxlength="30"
+                           name="{{ field.html_name }}" placeholder="{{ field.html_name }}" type="password"/>
+                    {% endif %}
+                    {{ field.errors }}
+
+                </div>
+                {%endfor%}
+
+                <input class="btn btn-primary loginbtn" type="submit" value="login"/>
+                <input name="next" type="hidden" value="{{ next }}"/>
+            </div>
+        </form>
+        {% endif %}
 
 
+    </div>
+</nav>
 
-<h1>Tool Share App</h1>
-
-    {%block content%}
-    {%endblock content%}
-
+<div class="container-fluid">
+    <div class="row">
+        {%block content%}{%endblock content%}
+    </div>
 </div>
 
-
-
-
-
-
+<script crossorigin="anonymous"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
 </html>

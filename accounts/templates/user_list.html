@@ -1,11 +1,12 @@
 {%extends 'base.html'%}
 
-<head>
-    <title>User List</title>
-</head>
 
 {%block content%}
+
 <h2>User List</h2>
-<div>{{user.username}}</div>
+
+{%for user in object_list%}
+<div><a href="{%url 'each_tool' user.pk %}">{{user}}</a></div>
+{%endfor%}
 
 {%endblock content%}

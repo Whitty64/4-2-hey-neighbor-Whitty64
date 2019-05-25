@@ -5,10 +5,25 @@
 </head>
 
 {%block content%}
-<h2>Log In</h2>
+<div class="overlay"><h1 class="logo">Error 404<br>Fish Not Found</h1></div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner carouselimg">
+    <div class="carousel-item active" data-interval="6000">
+      <img src="https://images.unsplash.com/photo-1511198384845-3f4e85bfe1c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2851&q=80" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="6000">
+      <img src="https://images.unsplash.com/photo-1448518184296-a22facb4446f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="6000">
+      <img src="https://images.unsplash.com/photo-1543163300-3566d6a3fab0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
 
-<form method="post">{%csrf_token%}
-    {{form.as_p}}
-    <button type="submit">Log In</button>
-</form>
+
 {%endblock content%}
