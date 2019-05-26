@@ -3,16 +3,16 @@
 {%block content%}
 
         <div class="squaredetail">
-            <h1 class="">{{tool.toolname}}</h1>
+            <h1 class=""><a href="{% url 'edit_tool' bike.pk %}">{{bike.bike_name}}</a></h1>
             <div class="avail">
                 <div class="detailinfo">
-                    <span>{{tool.type_of_tool}}/</span>
-                    <span>{{tool.owner}}</span>
-                    <span>({{tool.location}})</span>
-                    <span>{{tool.available}}</span>
+                    <span>{{bike.bike_type}}/</span>
+                    <span>{{bike.owner}}</span>
+                    <span>({{bike.location}})</span>
+                    <span>{{bike.available}}</span>
                 </div>
-                <img src="{{tool.model_pic}}">
-                <p class="description">{{tool.description}}</p>
+                <img src="{{bike.model_pic}}">
+                <p class="description">{{bike.description}}</p>
             </div>
         </div>
 

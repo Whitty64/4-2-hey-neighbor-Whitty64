@@ -1,18 +1,19 @@
-{%extends 'base.html'%}
 
 <head>
     <title>Sign Up</title>
 </head>
 
-{%block content%}
-<h2>Sign Up</h2>
 
-<form method="post">{%csrf_token%}
-    {{form.as_p}}
-    <button type="submit">Sign Up</button>
-</form>
 
-{%endblock content%}
-<form method="post">{%csrf_token%}
-    {{form.as_p}}
-    <button type="submit">Sign Up</button>
+<main class="col-8 signup">
+    <h2 class="formtitle">Sign Up</h2>
+    <form class="formsignup" method="post">{%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Sign Up</button>
+    </form>
+</main>
+<aside class="col-3 makefriends ">
+    <h1 class="abouttitle">Make Some Friends!</h1>
+    <p class="friendinfo">Maybe friendship can't begin until someone chooses you. But... that doesn't mean you don't get to make a choice too. You can't do that...unless you know who they are. And they can't choose you...until they know who you are. </p>
+    <span><a class="toplink" href="{% url 'userlist' %}">New Buds <i class="far fa-address-book"></i></a></span>
+</aside>

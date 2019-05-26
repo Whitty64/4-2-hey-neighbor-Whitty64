@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Tool
+from .models import Bike
 
-admin.site.register(Tool)
+admin.site.register(Bike)

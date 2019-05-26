@@ -4,9 +4,16 @@
 {%block content%}
 
 <h2>User List</h2>
+<div class="test">
+    <ul>
+        {%for user in object_list%}
+        <li>
+            <a class="toplink" href="{%url 'each_tool' user.pk %}">{{user}}</a>
+            <p>{{user.location}}</p>
+        </li>
+        {%endfor%}
 
-{%for user in object_list%}
-<div><a href="{%url 'each_tool' user.pk %}">{{user}}</a></div>
-{%endfor%}
+    </ul>
+</div>
 
 {%endblock content%}

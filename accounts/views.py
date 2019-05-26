@@ -26,6 +26,6 @@ class UserListView(ListView):
 class UserUpdateView(LoginRequiredMixin, UpdateView):
     model = CustomUser
     template_name = 'edit_user.html'
-    fields = ['age', 'alias']
+    fields = ['age', 'alias', 'email', 'username']
     success_url = reverse_lazy('main')
 

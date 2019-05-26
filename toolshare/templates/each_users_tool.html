@@ -1,16 +1,12 @@
 {%extends 'base.html'%}
 <html>
 
-<head>
-    <title>Tool Share App</title>
-</head>
-
 <div>
     {%block content%}
         <div>
-            {%for tool in object_list%}
-                <h4 class=""><a class="{% url 'tool_detail' " href="">{{tool.toolname}}</a></h4>
-                <img class = "imgposit"src="{{tool.model_pic}}">
+            {%for bike in object_list%}
+                <h4 class=""><a class="{% url 'tool_detail' " href="">{{bike.bike_name}}</a></h4>
+                <img class = "imgposit"src="{{bike.bike_pic}}">
             {%endfor%}
         </div>
     {%endblock content%}

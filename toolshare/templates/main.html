@@ -1,16 +1,28 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<h1 class="companyname">Error 404<br>Fish Not Found</h1>
-{% for tool in object_list %}
-    <div class="col-3 itemcard">
+<h1 class="companyname">Error 404<br>Fun Not Found</h1>
+
+<div class="col-3 about">
+    <h2 class="abouttitle">About Us</h2>
+    <p class="aboutinfo"><i class="fas fa-bicycle"></i> We want to give bicyclists a voice in how they envision their city, and that starts with Bikes Together being a center for all things bicycle related. By having access to education, bike maintenance, and to a bicycle, community members can see and experience the future of bikes. And we believe that future is bright and full of creative possibility. Together we make a better bike world.</p>
+</div>
+
+
+
+
+{% for bike in object_list %}
+    <div class="col-4 itemcard">
     <div class="card-deck">
       <div class="card">
-          <img class="card-img-top maintileimg" src="{{tool.model_pic}}">
-        <div class="card-body">
-            <h5 class="card-title"><a class="" href="{% url 'tools_detail' tool.pk %}">{{tool.toolname}}</a></h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <button>Rent</button>
+          <img class="card-img-top maintileimg" src="{{bike.model_pic}}">
+        <div class="card-body cardbody">
+            <h5 class="card-title"><a class="" href="{% url 'tools_detail' bike.pk %}">{{bike.bike_name}}</a></h5>
+          <p class="card-text">{{bike.description}}</p>
+
+
+
+                <input type="submit" name="{{available}}" value="available"/>
         </div>
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>

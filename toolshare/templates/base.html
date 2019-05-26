@@ -5,12 +5,13 @@
     <title>Tool Share App</title>
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barrio|East+Sea+Dokdo|Exo+2|Raleway|Roboto|Zilla+Slab+Highlight:400,700&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Barrio|Chelsea+Market|East+Sea+Dokdo|Exo+2|Permanent+Marker|Raleway|Roboto|Zilla+Slab+Highlight:400,700&display=swap"
           rel="stylesheet">
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
+
 <body>
 <nav class="navbar navbg">
     <div class="container-fluid">
@@ -20,9 +21,8 @@
 
             {% if request.user.is_authenticated %}
             <span><a class="toplink" href="{% url 'logout' %}">Log Out <i class="fas fa-user-times"></i></a></span>
-            <span><a class="toplink" href="{% url 'tool_new' %}">Add Boat <i class="fas fa-plus"></i></a></span>
-            <span><a class="toplink" href="{% url 'my_tools' user.pk %}">My Boats <i class="far fa-clipboard"></i></a></span>
-            <span><a class="toplink" href="{% url 'userlist' %}">User List <i class="far fa-address-book"></i></a></span>
+            <span><a class="toplink" href="{% url 'tool_new' %}">Add Bike <i class="fas fa-plus"></i></a></span>
+            <span><a class="toplink" href="{% url 'my_tools' user.pk %}">My Bikes <i class="far fa-clipboard"></i></a></span>
             {% endif %}
         </div>
 
@@ -30,28 +30,28 @@
         <span class="toplink">Hi,<a class="toplink" href="{% url 'edituser' user.pk %}">{{user.username}} <i class="fas fa-user-edit"></i></a></span>
 
         {% else %}
-        <form action="" class="form-inline userpass" method="post" role="form">{% csrf_token %}
-            <div class="form-group">
-                {% for field in form %}
-                <div class="input-group">
+            <form action="" class="form-inline userpass" method="post" role="form">{% csrf_token %}
+                <div class="form-group">
+                    {% for field in form %}
+                    <div class="input-group">
 
-                    {% if field.html_name == 'username'%}
-                    <input class="form-control" id="{{ field.id_for_label }}" maxlength="30"
-                           name="{{ field.html_name }}" placeholder="{{ field.html_name }}" type="text"/>
+                        {% if field.html_name == 'username'%}
+                            <input class="form-control loginbar" id="{{ field.id_for_label }}" maxlength="30"
+                                   name="{{ field.html_name }}" placeholder="{{ field.html_name }}" type="text"/>
 
-                    {% else %}
-                    <input class="form-control" id="{{ field.id_for_label }}" maxlength="30"
-                           name="{{ field.html_name }}" placeholder="{{ field.html_name }}" type="password"/>
-                    {% endif %}
-                    {{ field.errors }}
+                            {% else %}
+                            <input class="form-control loginbar" id="{{ field.id_for_label }}" maxlength="30"
+                                   name="{{ field.html_name }}" placeholder="{{ field.html_name }}" type="password"/>
+                        {% endif %}
+                        {{ field.errors }}
 
+                    </div>
+                    {%endfor%}
+
+                    <input class="btn btn-primary loginbtn" type="submit" value="Login"/>
+                    <input name="next" type="hidden" value="{{ next }}"/>
                 </div>
-                {%endfor%}
-
-                <input class="btn btn-primary loginbtn" type="submit" value="login"/>
-                <input name="next" type="hidden" value="{{ next }}"/>
-            </div>
-        </form>
+            </form>
         {% endif %}
 
 
@@ -59,7 +59,7 @@
 </nav>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row mainrow">
         {%block content%}{%endblock content%}
     </div>
 </div>

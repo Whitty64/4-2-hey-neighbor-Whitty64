@@ -1,8 +1,25 @@
 {%extends 'base.html'%}
 
 {%block content%}
-{% for tool in object_list %}
-    <h4 class=""><a class="" href="{% url 'edit_tool' tool.pk %}">{{tool.toolname}}</a></h4>
-    <img class = "imgposit"src="{{tool.model_pic}}">
+<h1 class="companyname">Error 404<br>Fun Not Found</h1>
+
+
+{% for bike in object_list %}
+<div class="col-4 itemcard mybike">
+    <div class="card-deck">
+      <div class="card">
+          <img class="card-img-top maintileimg" src="{{bike.model_pic}}">
+        <div class="card-body cardbody">
+            <h5 class="card-title"><a class="" href="{% url 'edit_tool' bike.pk %}">{{bike.bike_name}}</a></h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <button>Rent</button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    </div>
+
 {%endfor%}
 {%endblock%}
