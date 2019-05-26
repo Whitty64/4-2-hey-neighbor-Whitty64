@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="727204cc-2797-4179-a250-efe0ecc9bb5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/edit_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/edit_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/user_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/each_users_tool.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/each_users_tool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/edit_tool.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/edit_tool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/loginbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/my_tool.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/my_tool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/tool_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/tool_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/templates/tools_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/templates/tools_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolshare/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/toolshare/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accounts/templates/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -99,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -182,8 +164,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="60" />
-    <option name="y" value="776" />
+    <option name="y" value="160" />
     <option name="width" value="1386" />
     <option name="height" value="823" />
   </component>
@@ -282,12 +263,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558457578563</updated>
-      <workItem from="1558457579897" duration="117908000" />
+      <workItem from="1558457579897" duration="118061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117908000" />
+    <option name="totallyTimeSpent" value="118061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -299,7 +280,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="776" width="1386" height="823" extended-state="0" />
+    <frame x="0" y="160" width="1386" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -668,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toolshare/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -692,6 +666,13 @@
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

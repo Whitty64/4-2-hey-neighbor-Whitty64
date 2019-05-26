@@ -1,8 +1,10 @@
+{%extends 'base.html'%}
 
 <head>
     <title>Sign Up</title>
 </head>
 
+{%block content%}
 
 
 <main class="col-8 signup">
@@ -17,3 +19,4 @@
     <p class="friendinfo">Maybe friendship can't begin until someone chooses you. But... that doesn't mean you don't get to make a choice too. You can't do that...unless you know who they are. And they can't choose you...until they know who you are. </p>
     <span><a class="toplink" href="{% url 'userlist' %}">New Buds <i class="far fa-address-book"></i></a></span>
 </aside>
+{%endblock content%}
